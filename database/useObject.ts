@@ -41,6 +41,7 @@ export const useObjectVal = <
   const refField = options ? options.refField : undefined;
   const transform = options ? options.transform : undefined;
   const [snapshot, loading, error] = useObject(query);
+  console.log('aisuodhfijan;osdfl')
   const value = useMemo(
     () =>
       (snapshot

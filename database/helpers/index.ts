@@ -21,8 +21,9 @@ export const snapshotToData = <T>(
 
   const val = snapshot.val();
   if (isObject(val)) {
+
     return {
-      ...(transform ? transform(val) : val),
+      data: (transform ? transform(val) : val),
       ...(keyField ? { [keyField]: snapshot.key } : null),
       ...(refField ? { [refField]: snapshot.ref } : null),
     };
